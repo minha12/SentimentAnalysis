@@ -1,6 +1,10 @@
 # Sentiment Analysis
 
-Source: https://data-flair.training/blogs/data-science-r-sentiment-analysis-project/
+Source: 
+
+[1] https://data-flair.training/blogs/data-science-r-sentiment-analysis-project/
+
+[2] https://www.tidytextmining.com/sentiment.html
 
 > Sentiment analysis is the act of analyzing words to determine sentiments and opinions that may be positive or negative in polarity. This is a type of classification where the classes may be binary (positive and negative) or multiple (happy, angry, sad, disgusted,..). We’ll implement this data science project in the language R and use the dataset by the ‘janeaustenR’ package. We will use general-purpose bing, perform an inner join, and in the end, we’ll build a word cloud to display the result.
 
@@ -226,6 +230,8 @@ The idea is joining two dataframes - the given dataset and the sentiment dataset
 
 > In the next step, we will use spread() function to segregate our data into separate columns of positive and negative sentiments. We will then use the mutate() function to calculate the total sentiment, that is, the difference between positive and negative sentiment.
 
+> We define an index here to keep track of where we are in the narrative; this index (using integer division) counts up sections of 80 lines of text. The %/% operator does integer division (x %/% y is equivalent to floor(x/y)) so the index keeps track of which 80-line section of text we are counting up negative and positive sentiment in.
+
 
 ```R
 library(tidyr)
@@ -374,3 +380,8 @@ tidy_data %>%
 [2] What is bing?
 
 
+[A]
+> There are a variety of methods and dictionaries that exist for evaluating the opinion or emotion in text. The tidytext package provides access to several sentiment lexicons. Three general-purpose lexicons are
+>- AFINN from Finn Årup Nielsen,
+>- bing from Bing Liu and collaborators, and
+>- nrc from Saif Mohammad and Peter Turney.`
